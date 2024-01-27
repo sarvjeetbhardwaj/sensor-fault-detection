@@ -1,1 +1,2 @@
-DATABASE_NAME = "Sensor-Data"
+DATABASE_NAME = "Sensor-data"
+COLLECTION_NAME = 'sensor-data'
