@@ -22,3 +22,18 @@ DATA_INGESTION_DIR_NAME = 'data_ingestion'
 DATA_INGESTION_FEATURE_STORE_DIR = 'feature_store'
 DATA_INGESTION_INGESTED_DIR = 'ingested'
 DATA_INGESTION_TRAIN_TEST_SPLIT_RATION = 0.2
+
+# DataValidation related constants
+
+DATA_VALIDATION_DIR_NAME = 'data_validation'
+DATA_VALIDATION_VALID_DIR = 'validated'
+DATA_VALIDATION_INVALID_DIR = 'invalid'
+DATA_VALIDATION_DRIFT_REPORT_DIR = 'drift_report'
+DATA_VALIDATION_DRIFT_REPORT_FILE_NAME = 'report.yaml'
+
+
+# Data Tranformation related constants
+DATA_TRANSFORMATION_DIR_NAME = 'data_transformation'
+DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR = 'transformed'
+DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR = 'transformed_object'
+

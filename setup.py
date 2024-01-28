@@ -9,7 +9,7 @@ def get_requirements()->list:
 
     with open('requirements.txt', 'r') as f:
         required_packages = f.readlines()
-        required_packages = [i.rstrip('\n') for i in required_packages]
+        required_packages = [i.strip('\n') for i in required_packages]
         requirement_list.extend(required_packages)
 
     return requirement_list
