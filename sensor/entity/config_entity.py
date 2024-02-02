@@ -9,9 +9,6 @@ from sensor.constant.training_pipeline import PIPELINE_NAME, ARTIFACT_DIR,DATA_I
 from sensor.constant import training_pipeline
 
 
-
-
-
 class TrainingPipelineConfig:
 
     def __init__(self, timestamp=datetime.now()):
@@ -73,3 +70,15 @@ class DataTransformationConfig:
         self.transformed_object_file_path = os.path.join(self.data_transformation_dir, 
                                                         training_pipeline.DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,
                                                         training_pipeline.PREPROCESSING_OBJECT_FILE_NAME.replace('csv', 'npy'))
+        
+
+class ModelTrainerConfig:
+
+            def __init__(self, training_pipeline_config:TrainingPipelineConfig):
+                self.model_trainer_dir = os.path.join(training_pipeline_config.artifact_dir,
+                                                      training_pipeline.MODEL_TRAINER_DIR_NAME
+                                                      )
+                self.trained_model_file_path = os.path.join(self.model_trainer_dir,
+                                                            training_pipeline.MODEL_FILE_NAME)
+                self.expected_accuracy = training_pipeline.MODEL_TRAINER_EXPECTED_SCORE
+                self.overfitting_underfitting_threshold = training_pipeline.MODEL_TRAINER_OVERFITTING_UNDERFITTING_THRESHOLD
