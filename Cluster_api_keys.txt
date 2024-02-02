@@ -1,0 +1,25 @@
+Cluster_api_keys
+
+API key:
+VDFLIC5ZIZZ7Q7YC
+
+API secret:
+c+DMSd+CYD15ruTmkdI5rgdrpaL9ytXUGzLcsvwxEsRVGXW1kF+53oUOxzKIPjTp
+
+Bootstrap server:
+pkc-4r087.us-west2.gcp.confluent.cloud:9092
+
+Schema_API_KEYS
+
+API key:
+DSZQ4UOEFUOCKFIG
+
+API secret:
+MjccXsWZh08EqQZy55mdVJdG+8cUBiP3NhaQ0Ij5U1vObG74imnq8H2lxufknk2p
+
+Schema EndPoint:
+https://psrc-r3wv7.us-central1.gcp.confluent.cloud
+
+
+mongodb_url
+mongodb+srv://sbhard3:Tuktuk123@cluster0.ttsmmgf.mongodb.net/?retryWrites=true&w=majority
