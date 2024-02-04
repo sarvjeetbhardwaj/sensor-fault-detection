@@ -1,6 +1,8 @@
 import os
 from sensor.constant.s3_bucket import TRAINING_BUCKET_NAME
 
+SAVED_MODEL_DIR = 'saved_models'
+
 # defining common constant variable for training pipeline
 TARGET_COLUMN = 'class'
 PIPELINE_NAME = 'sensor'
@@ -43,5 +45,14 @@ MODEL_TRAINER_TRAINER_MODEL_DIR = 'trained_model'
 MODEL_TRAINER_TRAINED_MODEL_NAME = 'model.pkl'
 MODEL_TRAINER_EXPECTED_SCORE = 0.6
 MODEL_TRAINER_OVERFITTING_UNDERFITTING_THRESHOLD= 0.6
+
+## Model evaluation related constants
+MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE = 0.02
+MODEL_EVALUATION_DIR_NAME = 'model_evaluation'
+MODEL_EVALUATION_REPORT_NAME = 'report.yaml'
+
+## Model pusher related constants
+MODEL_PUSHER_DIR_NAME = 'model_pusher'
+MODEL_PUSHER_SAVED_MODEL_DIR = SAVED_MODEL_DIR
 
 

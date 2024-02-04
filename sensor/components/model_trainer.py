@@ -6,7 +6,7 @@ from sensor.entity.config_entity import ModelTrainerConfig
 from xgboost import XGBClassifier
 import os, sys
 from sensor.ml.metric.classification_metric import get_classification_score
-from sensor.ml.model import SensorModel
+from sensor.ml.model.estimator import SensorModel
 from sensor.utils.main_utils import save_object,load_object
 
 class ModelTrainer:
@@ -65,7 +65,7 @@ class ModelTrainer:
             save_object(self.model_trainer_config.trained_model_file_path, obj=sensor_model)
 
             #model trainer_artifact
-            model_trainer_artifact = ModelTrainerArtifact(trained_mode_file_path=self.model_trainer_config.trained_model_file_path,
+            model_trainer_artifact = ModelTrainerArtifact(trained_model_file_path=self.model_trainer_config.trained_model_file_path,
                                 train_metric_artifact=classification_train_metric,
                                 test_metric_artifact=classification_train_metric)
             logging.info(f'Model Trainer artifact : {model_trainer_artifact}')
