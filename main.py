@@ -43,7 +43,6 @@ async def trainRouteClient():
 @app.get('/predict')
 async def predict_route():
     try:
-        
         df = None
         model_resolver = ModelResolver(model_dir=SAVED_MODEL_DIR)
         if not model_resolver.is_model_exists():
@@ -57,6 +56,7 @@ async def predict_route():
 
     except Exception as e:
         raise Response(f'Error Occured {e}')
+    
 def main():
     try:
         training_pipeline = TrainPipeline()
@@ -66,6 +66,6 @@ def main():
         logging.exception(e)
 
 if __name__=='__main__':
-    main()
+    #main()
     app_run(app, host=APP_HOST, port=APP_PORT)
  

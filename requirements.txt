@@ -10,3 +10,4 @@ imblearn
 dill
 xgboost
 fastapi
+uvicorn[standard]
