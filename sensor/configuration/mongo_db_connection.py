@@ -12,7 +12,7 @@ class MongoDBClient:
     def __init__(self, database_name=DATABASE_NAME) -> None:
         try:
             if MongoDBClient.client is None:
-                mongo_db_url = ""
+                mongo_db_url = "  "
                 #mongo_db_url = os.getenv(MONGO_DB_URL)
                 #if mongo_db_url is None:
                 #    raise Exception(f'Environment key:{MONGO_DB_URL} is not set.')
