@@ -11,26 +11,27 @@ In this project, the system in focus is the Air Pressure system (APS) which gene
 The problem is to reduce the cost due to unnecessary repairs. So it is required to minimize the false predictions.
 
 # Tech Stack Used
-Python
-FastAPI
-Machine learning algorithms
-Docker
-MongoDB
-
-# Infrastructure Required.
-AWS S3
-AWS EC2
-AWS ECR
-Git Actions
-
+1. AWS S3
+2. AWS EC2
+3. AWS ECR
+4. Git Actions
 
 # How to run?
 Before we run the project, make sure that you are having MongoDB in your local system, with Compass since we are using MongoDB for data storage. You also need AWS account to access the service like S3, ECR and EC2 instances.
+Replace the  value of 'mongo_db_url' with your own collection's mongodburl on sensor.configuration.mongo_db_connection.py file
 
 # DataCollection
 ![alt text](image.png)
 
 # Project Architecture
 ![alt text](image-1.png)
+
+# How to run the project on local
+1. Create a virtual environment 
+    1. pip install virtualenv==20.25.0  (download the required library)
+    2. virtualenv -p /usr/bin/python3 <virtualenv_name> (create virtual environment)
+    3. source <virtualenv_name>/bin/activate (activate virtual environment)
+    4. python setup.py install (install the dependencies)
+    5. uvicorn main:app (run application)
 
 
