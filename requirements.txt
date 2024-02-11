@@ -37,3 +37,4 @@ websockets==12.0
 xgboost==2.0.3
 zope.interface==6.1
 logging
+openpyxl==3.1.2

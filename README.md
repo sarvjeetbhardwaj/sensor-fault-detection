@@ -28,10 +28,10 @@ Replace the  value of 'mongo_db_url' with your own collection's mongodburl on se
 
 # How to run the project on local
 1. Create a virtual environment 
-    1. pip install virtualenv==20.25.0  (download the required library)
-    2. virtualenv -p /usr/bin/python3 <virtualenv_name> (create virtual environment)
-    3. source <virtualenv_name>/bin/activate (activate virtual environment)
-    4. python setup.py install (install the dependencies)
-    5. uvicorn main:app (run application)
+2. pip install virtualenv==20.25.0  (download the required library)
+3. virtualenv -p /usr/bin/python3 <virtualenv_name> (create virtual environment)
+4. source <virtualenv_name>/bin/activate (activate virtual environment)
+5. python setup.py install (install the dependencies)
+6. uvicorn main:app (run application)
 
 

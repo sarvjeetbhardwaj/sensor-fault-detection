@@ -4,7 +4,6 @@ from datetime import datetime
 
 TIMESTAMP = f'{datetime.now().strftime("%Y-%m-%d %H_%M_%S")}'
 
-
 LOG_DIR = "logs"
 LOG_FILE_NAME = f"log_{TIMESTAMP}.log"
 

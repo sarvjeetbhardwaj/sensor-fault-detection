@@ -13,6 +13,8 @@ from fastapi.responses import Response
 from sensor.ml.model.estimator import ModelResolver, TargetValueMapping
 from sensor.utils.main_utils import load_object
 from fastapi.middleware.cors import CORSMiddleware
+import pandas as pd
+from sensor.utils.main_utils import read_yaml_file
 
 app = FastAPI()
 origins = ["*"]
@@ -49,11 +51,13 @@ async def predict_route():
             return Response('Model is not available')
         
         best_model_path = model_resolver.get_best_model_path()
+        print(best_model_path)
         model = load_object(file_path=best_model_path) 
         y_pred = model.predict(df)
         df['predicted_column'] = y_pred
         df['predicted_column'].replace(TargetValueMapping().reverse_mapping(), inplace=True)
-
+        print(df['predicted_column'] )
+        return Response(df['predicted_column'])
     except Exception as e:
         raise Response(f'Error Occured {e}')
     
